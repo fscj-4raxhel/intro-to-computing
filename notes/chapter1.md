@@ -1,0 +1,66 @@
+# Computing Fundamentals
+Computer science is the study of computer hardware, algorithm and data structure and how these three components work together to provide information systems.
+
+Algorithm is a clearly defined sequence of steps to achieve some goal.
+
+We need a programming language as a medium to discuss these concepts and to build a fundation on top of which the computer science career can be built. In this course we choose Java because its features are deemed good practices and the concepts are transferable.
+
+Computers are general purpose machines that are programmable. General purpose machines can perform many tasks as opposed to single purpose machines like vehicles or coffee machines which can do only one type of task. Computers work on data, (facts, figures and ideas) and synthesize data into information (reports, summaries, and animations).
+
+## Brief history of computing
+The notion of computing origined at counting followed by a sequence of innovative concepts and tools such as arithmetic, simple machines like abacus and Napier's bones for logarithmic tables.
+
+The first computer, though it's purely mechanical instead of electronic, was invented by Charles Babbage and called difference engine. It was part of a larger project sponsered by the British Government which was not finished partially due to the personality of Charles. It was deemed to be a computer because it has means to input and output and program. Ada Augusta King was deemed the first programmer because she was very interested in the difference engine after her mom introduced her to Babbage.
+
+In 1940s, German mathematician John Von Neumann defined the stored program concept which is essential to the notion of a computer. A machine is programmable means that it has memory in which instructions are stored and which can be modified.
+
+### The four generation of computers
+Each generation was characterized by the technology used for the electronical switches.
+
+1st Gen, 1944--58, uses vaccum tubes.
+
+2nd Gen, 1959--1963, uses a solid state device named transistor.
+
+3rd Gen, 1964--70, uses integrated circuit which is a solid state device on which the entire circuit, the transistor and the connections between them can be created.
+
+4th Gen, 1971--now, VLSI very large scale integration.
+
+## Computer system
+A computer system consists of five parts: user(s), software, procedures, hardware, and data.
+
+- The user is the individual that will be using the computer to produce the results. He/She is typically not trained in computer science but liked to be trained to use a computer.
+- Software is the program (along with its documentations and websites) that allows the computer to  perform certain tasks. Programs are algorithms expressed in programming languages.
+- Procedures are the steps that the user must follow to use the software. This is usually described in documentation either in prints or online.
+- Hardware is the physical mahcine where the software runs.
+- Data are facts, figures, ideas that an software uses to produce information.
+
+All five parts work together to produce meaningful outcomes.
+
+### Four categories of computer hardware
+Although the following categorization is somewhat subjective and overlaps, computers are typically divided into four categories:
+- Tables: Very mobile but less powerful
+- Laptop: Heavier to carry around but more powerful
+- Desktop: Movable but not too often, powerful enough
+- Server: Not mobile at all but very powerful
+
+### Five componnets of compter hardware
+Despite that computers come in different sizes and powers, they function in the same way and are composed of the same categories of hardwares.
+- CUP, the central processing unit, is the heart/brain of the computer that contains the circuits that allows the computer to do the calculations and follow the instructions of the program. It consists of the Control Unit that is responsible for the controlling the components of the computer and follows the instructions of the program and Arithmetic/Logic Unit that performs the calculations and logical comparisons.
+- Main memory or RAM(Random Access Memory) stores the data, program instructions, the produced data and results. RAM is volatile meaning it losts the data when the power is off.
+- Input device transfers the real-world representation of the data into data that the computer understands. Examples include keyboards, microphones, touch screens, scanners
+- Output device transfer the data representation of the computer to the real-world representation. Examples include, monitors, printers, speakers.
+- Auxiliary storage device are non-volatile storage devices for long-term memory. For exmaple, disks, CD, DVD, flash drives.
+
+Communication devices are not traditionally included as the five essential components of a computer but nowadays almost every computer has communication devices.
+
+## Data representation
+Any data stored in a computer must be binary because the hardware that make up a computer are basically electronic switches. A switch is called a bi-stable device because it has two states: open (no current flowing) or close(current flowing). Since memory is comprised of switches, data stored in memory must be represented in two states which is mathematically a binary (number system).
+
+Positional number system writes a number as a sequence of digits with digits at different positions having different values. Both decimal and binary number systems are positional number systems. To distinguish the two, the name bit (binary digits) is used. So a bit is essentially either 0 or 1.
+
+In general, n bits can represent $2^n$ values. Here are some examples:
+$2^4 = 16$, $2^8=256$, $2^{16}=65,536$, $2^{32}=4,294,967,296$.
+
+8 bits is called a byte and it is the basic nuit of storage in computers. One million byte is a megabyte and one thousand megabyte is a gigabyte.
+
+Memory is divided into cells and each cell is labeled by a binary number called address to distinguish different cells. At any point of time, each cell can only hold an unique value which can be read by the program. If the program modifies the value of a memory cell, this is that the program stores data into a memory cell. To store values into computer memory, the data must be digitalized, which means encoded into binary strings in some way.
