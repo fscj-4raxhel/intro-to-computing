@@ -76,3 +76,8 @@ The OS then checks out for the system to make sure that all components are funct
 The OS supports the application software in many was. For example, if the user clicks the icon for a work processor, e.g. Microsoft Word, it is the OS that loads the program from hard drive to RAM so that its instructions can be fetched into CPU. When s/he opens a file, the OS is responsible for locating the file and loaded into the RAM. Next, the user edits the file, the modification of the data was still in memory, hence not serialized into hard drive until s/he clicks the Save button. Then the application software again asks the OS for help to save the updated data to hard drive.
 
 When the computer is to shut down, the OS makes sure that all data that need to be remembered are stored safely in the hard drive before it actually shuts down. IF an operating system is a person he is a steward.
+
+### Application Software
+Application software works with the OS to apply the computer to the specific tasks. We have seen the word processing application that focuses on text editing as an exmaple in the previous section. Also from Microsoft, there are spreadshet application Excel that works on numerical data. There are database software, DBMS database management system, from various companies. The point is that the limiting factors of the kinds of application software are programmers' imagination and market conditions.
+
+The users of application software are not necessarily computer scientists but they need to be very competent with the domain knowledge, the knowledge in the area where the the application is specialized.
