@@ -64,3 +64,15 @@ $2^4 = 16$, $2^8=256$, $2^{16}=65,536$, $2^{32}=4,294,967,296$.
 8 bits is called a byte and it is the basic nuit of storage in computers. One million byte is a megabyte and one thousand megabyte is a gigabyte.
 
 Memory is divided into cells and each cell is labeled by a binary number called address to distinguish different cells. At any point of time, each cell can only hold an unique value which can be read by the program. If the program modifies the value of a memory cell, this is that the program stores data into a memory cell. To store values into computer memory, the data must be digitalized, which means encoded into binary strings in some way.
+
+## Computer Software
+Computer software is is often divided into two categories: system software and application software.
+
+### System software
+System software is primarily consists of the OS (Operating System) that manages the resources of the computer system. It is responsible for getting things started and presenting the user the UI (User Interface). But the OS is a software in nature, so it does not have the capacity to load itself to the RAM and run. In fact, there is a simple program called boostrapt loader which was loaded, by manufacture, in a special kind of non-volatile memory called ROM(Read-Only Memory). When the computer first starts, the control unit (one major part of CPU) fetches instructions from ROM which in turn fetches the instructions of the OS from hard drive to RAM so that it can run.
+
+The OS then checks out for the system to make sure that all components are functioning correctly and then presents the UI (User Interface) to the user. This UI is so-called Desktop which mimics the office desktop. Like we have different items on our office desktop, we have icons that symbolize the hard disk, file folders and applications on a computer desktop.
+
+The OS supports the application software in many was. For example, if the user clicks the icon for a work processor, e.g. Microsoft Word, it is the OS that loads the program from hard drive to RAM so that its instructions can be fetched into CPU. When s/he opens a file, the OS is responsible for locating the file and loaded into the RAM. Next, the user edits the file, the modification of the data was still in memory, hence not serialized into hard drive until s/he clicks the Save button. Then the application software again asks the OS for help to save the updated data to hard drive.
+
+When the computer is to shut down, the OS makes sure that all data that need to be remembered are stored safely in the hard drive before it actually shuts down. IF an operating system is a person he is a steward.
