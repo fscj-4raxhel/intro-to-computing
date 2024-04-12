@@ -81,3 +81,17 @@ When the computer is to shut down, the OS makes sure that all data that need to 
 Application software works with the OS to apply the computer to the specific tasks. We have seen the word processing application that focuses on text editing as an exmaple in the previous section. Also from Microsoft, there are spreadshet application Excel that works on numerical data. There are database software, DBMS database management system, from various companies. The point is that the limiting factors of the kinds of application software are programmers' imagination and market conditions.
 
 The users of application software are not necessarily computer scientists but they need to be very competent with the domain knowledge, the knowledge in the area where the the application is specialized.
+
+## Software Development
+Developing software (someitmes called software engineering) is to study a real-world problem and then design and develop a program to apply computer to solve that problem. Remember that a program is an algorithm expressed in programming languages. And an algorithm is a clear set of steps to achieve certain goals so it has to be unambiguous and finite, which means that it states clearly what must be done and it terminates in finite time.
+
+### Software Engineering
+Developing large-scale software systems can be extremely complex and often takes teams of progressional software engineers. The approaches to software engineering may vary a lot but there are common phases of software engineering. There are analysis, design, coding, testing, debugging, production and maintenance phases.
+
+- Analysis phase is to develop a requirements specification that clearly indicates what is (and sometimes what is not) required of the system. A fabulous system that does not fulfill the requirement is waste of effort.
+- Design phase is the determination of an approach to solve the problem. This often involves breaking the problem into smaller and more manageable pieces by the senior member of the team. This allows the solution to complete in reasonable time.
+- Coding phase is to express an algorithm in a certain programming language. This is the fundation without which any other phases can not be carried out.
+- Testing phase is to ensure the system upon completion does what is required. This is the most overlooked phase of development. Each part of the system, starting from the individual pieces developed by the programmer, must be tested to see that it functions according to the requirements.
+- Debugging phase is to correc the problems with the program when it doesn't perform as expected. Errors may root at not understanding what is actually required, not fulling understanding the details of the programming language, invalid assumption or oversight of the algorithm, etc. As human beings, making mistakes is inevitable. Debugging phase is when we fix our errors and get the system right.
+- Production phase is to release the software to its users. We are at least convinced that the program is doing what it is intended to do.
+- Maintenance phase is to re-analyze, re-design, re-code the system resulting in new versions. The driving forces include undetected bug, change in requirements, hardware upgrade, etc.
