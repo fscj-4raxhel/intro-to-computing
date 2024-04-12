@@ -95,3 +95,37 @@ Developing large-scale software systems can be extremely complex and often takes
 - Debugging phase is to correc the problems with the program when it doesn't perform as expected. Errors may root at not understanding what is actually required, not fulling understanding the details of the programming language, invalid assumption or oversight of the algorithm, etc. As human beings, making mistakes is inevitable. Debugging phase is when we fix our errors and get the system right.
 - Production phase is to release the software to its users. We are at least convinced that the program is doing what it is intended to do.
 - Maintenance phase is to re-analyze, re-design, re-code the system resulting in new versions. The driving forces include undetected bug, change in requirements, hardware upgrade, etc.
+
+## Programming Language
+Statements in natrual language such as English are often ambiguous and rely on the listener's common sence and world's knowledge. And computers does not have common sense so natural languages can not be used to instruct computers. We need to use specially designed programming langues.
+
+### Generations of programming languages
+Like computers themselves, the programming languages evolved over time.
+
+1st Gen programming language is the machine language. Each operation was written as a separate instruction in form of a sequence of binary digits.
+
+2nd Gen proigramming language is the assembly language. The idea is to let the computer help and the means is to write a program, so-called assembler, to automatically convert algorithms written in symbolic notation into machine code. In assembly language, each operation (opcode) was given a name and the operands (addresses) were expressed as a combination of names and simple arithmetic operations.
+
+Running the assembly language program has two phases: assemble and execution.
+- Assembly is the translation of assembly program into machine language.
+- Execution is running the resulted machine language program.
+
+Note that the assemly phase needs to run at least once while the resulting machine language program can run as many as we want. Data kick in the execution phase. Also note that an assembler itself may have been originally written in assembly language and translated into machine language by another assembler.
+
+3rd Gen programming language is the problem-oriented language or simply high-level language aiming at allowing the programmers to focus on specific application domain. It is more natrual than the previous generations. Programs written in high-level languages are often built using pieces of previously written and compiled code. Those pre-existing code (in machine code after being compiled) are collectively called libraries. We need a special kind of program called linker to put together pieces of code. Like computers do not understand assembly language, they don't understand high-level languages. So as we need assembler to translate assembly language program into machine code, we need compiler to translate high-level language programs into machine code.
+
+The execution of high-level language programs are similar to assembly language programs but the assembly phase is replaced by two phases: compile and link.
+- Comile phase: The compiler translates the source code in high-level language into machine language code, called object code.
+- Link phase: The linker combines the object code and the code in libraries into executable code in machine language.
+
+Don't forget the third phase, the execution phase when the resulting machine code is executed with the associated data come into play.
+
+## Program Preparation
+Once the analysis and design phase have been completed, the programer should have an algorithm to express in certain programming language. They often employ the four step edit-compile-link-exectue cycle.
+
+- Edit: Programmers type in, correct, and/or save the source code (code written in high-level programming langues) using code editors (usually integrated into IDEs). Some hard core developers use text editors like Vim or Emacs but IDEs have their advantages.
+- Compile: A compiler translates the source code into object code. Syntax errors are detected in this phase. The programmer must correct syntax errors before moving on to the next phase.
+- Link: A linker puts together object code and library code.
+- Exectue: The program is ready to test. Bugs (also called execturion errors or logic errors) are detected in this phase. In that case, the programmer would re-iterate this cycle until s/he is statisfied with the resulting program.
+
+IDE (Integrated Development Environment) is a special program used by programmers to perform the development cycle. An IDE helps developers silently a lot. For example, when the programer modifies one file, IDE determines which files needs re-compile and link and do it for the programmer. Many times, the programer is not aware of this process.
