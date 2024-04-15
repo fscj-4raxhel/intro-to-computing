@@ -11,3 +11,5 @@ Java happend to come along at about the same time as the World Wide Web. Using a
 We choose Java not because of interesting web programming or embedded programming. We choose Java because it's a modern language that supports the object-oriented paradigm of programming and its design is simple and safe comparing C++.
 
 In object-oriented programming, we use object to represent real-world entities and design the system to model its real-world counterpart.
+
+### Drawing a Square
