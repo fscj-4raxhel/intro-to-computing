@@ -10,12 +10,12 @@ import static java.lang.Math.*;
  * This class is the very first program in the course COSC 1P02
  * 
  */
-public class Example_2_1 {
+public class Square {
 
     private TurtleDisplayer display; //display to draw on
     private Turtle          yertle;  //turtle to do drawing
 
-    public Example_2_1(){
+    public Square(){
         display = new TurtleDisplayer();
         yertle = new Turtle();
         display.placeTurtle(yertle);
@@ -35,5 +35,5 @@ public class Example_2_1 {
 
     }// constructor
 
-    public static void main(String[] args){Example_2_1 e = new Example_2_1();};
+    public static void main(String[] args){Square s = new Square();};
 }

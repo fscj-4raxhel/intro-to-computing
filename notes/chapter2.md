@@ -13,5 +13,9 @@ We choose Java not because of interesting web programming or embedded programmin
 In object-oriented programming, we use object to represent real-world entities and design the system to model its real-world counterpart.
 
 ### Drawing a Square
+Drwaring a Square with the famouse Turtle graphics package oringally for Logo. See code and in `src/lectures/chapter2/Square.java`.
 
-Drwaring a Square with the famouse Turtle graphics package oringally for Logo. See code and in `src/lectures/chapter2/Example_2_1.java`
+## Turtle Graphics
+The turtle graphics package was first intorudced with the language Logo. There are turtles, `Tutle` object, each having a pen and move on the canvas, the `TurtleDisplayer` object. So when the pen was down while a turtle moves, a line was drawn.
+
+Full description of this packe please refer to the library documentation. `Square.java` is a quick demonstration of drawing a squre with one turtle.

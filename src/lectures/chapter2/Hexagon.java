@@ -13,11 +13,11 @@ import static java.lang.Math.*;
  * of certain length and make a turn.
  * 
  */
-public class Loop {
+public class Hexagon {
     private TurtleDisplayer display; //display to draw on
     private Turtle          yertle;  //turtle to do drawing
 
-    public Loop(int length, int n){
+    public Hexagon(){
         display = new TurtleDisplayer();
         yertle = new Turtle();
         display.placeTurtle(yertle);
@@ -25,14 +25,14 @@ public class Loop {
         yertle.penDown();
         yertle.right(PI/2);
 
-        for (int i = 0; i < n; i++) {
-            yertle.forward(length);
-            yertle.right( 2 * PI / n);
+        for (int i = 0; i < 6; i++) {
+            yertle.forward(40);
+            yertle.right( PI / 3);
         }
 
         display.close();
 
     }// constructor
 
-    public static void main(String[] args){Loop l = new Loop(40, 8);};
+    public static void main(String[] args){Hexagon h = new Hexagon();};
 }
