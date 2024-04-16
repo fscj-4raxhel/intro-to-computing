@@ -28,21 +28,26 @@ public class Honeycomb{
         //Move yertle to the starting position
         yertle.forward(40);
         yertle.left(2 * PI / 3);
+
         //The ourter loop repeats six times of drawing a hexagon and
         //Move to the starting point of the next hexagon
-        yertle.penDown();
         for(int i = 0; i < 6; i++){
             //Draw hexagon
+            yertle.penDown();
             for(int j = 0; j < 6; j++){
                 yertle.forward(40);
                 yertle.right(PI/3);
             }
+
+            //Move to the starting point of the next hexagon
             yertle.penUp();
             yertle.forward(40);
             yertle.left(PI / 3);
-            yertle.penDown();
         }
-        yertle.penUp();
+
+        //Resetting the turtle to the initial position
+        yertle.right(2 * PI /2);
+        yertle.backward(40);
 
         display.close();
 

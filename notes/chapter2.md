@@ -41,3 +41,10 @@ Third, as long as the program reached the loop body, all `statement(s)` in the l
 Fourth, the `termination` expression is evaluated again. So basically, go back to second step.
 
 See `src/lectures/chapter2/Hexagon.java` for an example and compare the code with `Square.java` to see how for loop helps programmer avoid code redundancy.
+
+## Composition (Nesting)
+Many complext pattern are composed of repetition of a sub-pattern. A honeycomb, for example, is composed of six hexagons. To produce the honeycomb, we use the code that creates a hexagon repetitively. In other words, we embed an algorithm to create a new algorithm. We call this way of creating new algorithms composition.
+
+The algorithm to create a honeycomb embeds the algorithem to create a hexagon as the inner loop. The other loop is responsible for moving the turtle to the starting point and the inner loop is responsible for drawing the hexagon.
+
+This algorithem is expressed in Java in `src/lectures/chapter2/Honeycomb.java`. Note that at the end of the constructor, there are two lines of code that reset the position of the turtle to its original position. The pen was up in the last iteration of the loop. So this position resetting has no visual effect. Why do we bother? That is because we don't want to lose track of the turtle. Suppose that drawing a honeycomb needs to be embedded into a even more complex patter. Without knowing the position of the turtle, it's very hard if not impossible to continue to the next honeycomb.
