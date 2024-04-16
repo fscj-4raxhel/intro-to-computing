@@ -19,3 +19,25 @@ Drwaring a Square with the famouse Turtle graphics package oringally for Logo. S
 The turtle graphics package was first intorudced with the language Logo. There are turtles, `Tutle` object, each having a pen and move on the canvas, the `TurtleDisplayer` object. So when the pen was down while a turtle moves, a line was drawn.
 
 Full description of this packe please refer to the library documentation. `Square.java` is a quick demonstration of drawing a squre with one turtle.
+
+## Repetition (Loop)
+The for statement, one kind of loop construct, in Java looks like the following:
+```java
+for (initialization; termination;
+     increment) {
+    statement(s)
+}
+```
+As we can see, there is the `for` keyword leading a pair of parentheses `()` containing three expresssions splitted by semicolon `;` followed by the loop body embodied by a pair of curly braces `{}`.
+
+Usually, a special variable called loop index is involved in for loops. The loop index was commonly initialized in the `initialization` express, checked in the `termination` expression and modified by the `increment` expression. So the execution of a for loop is as follows:
+
+First, the initialization is executed in the begining of the loop structure, unconditionally.
+
+Second, the termination express was evaluted. If it is `false`, the for loop ends. The program jumps to the statement right after the for statement. Otherwise, the loop body was exectued for at least once.
+
+Third, as long as the program reached the loop body, all `statement(s)` in the loop body will be executed followed by the evaluation `increament` expression.
+
+Fourth, the `termination` expression is evaluated again. So basically, go back to second step.
+
+See `src/lectures/chapter2/Hexagon.java` for an example and compare the code with `Square.java` to see how for loop helps programmer avoid code redundancy.
