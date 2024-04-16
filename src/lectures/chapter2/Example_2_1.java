@@ -7,7 +7,7 @@ import static java.lang.Math.*;
  * @author D. Hughes, Chris Jin
  * @version 1.1 (April 2024)
  * 
- *          This class is the very first program in the course COSC 1P02
+ * This class is the very first program in the course COSC 1P02
  * 
  */
 public class Example_2_1 {
