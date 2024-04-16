@@ -13,3 +13,5 @@ We choose Java not because of interesting web programming or embedded programmin
 In object-oriented programming, we use object to represent real-world entities and design the system to model its real-world counterpart.
 
 ### Drawing a Square
+
+Drwaring a Square with the famouse Turtle graphics package oringally for Logo. See code and in `src/lectures/chapter2/Example_2_1.java`
