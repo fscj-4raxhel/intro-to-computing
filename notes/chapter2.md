@@ -78,3 +78,8 @@ As stated before, we use object to perform actions and we achieve that through m
 Object.MethodName(Arguments); // method call statement
 ```
 Arguments provide additional information required to perform the action.
+
+### State and Behavior
+Each object has a state which is a collection of the things it knows. The behavior of an object is what it does when responding to a method call. An object's behavior depends on its states and may change its states.
+
+The states of different objects are independent. Changing the state of object one does not affect the state of object two. See the two turtle example in `/src/lectures/chapter2/TwoOnOne.java`
