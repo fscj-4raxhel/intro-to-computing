@@ -48,3 +48,33 @@ Many complext pattern are composed of repetition of a sub-pattern. A honeycomb, 
 The algorithm to create a honeycomb embeds the algorithem to create a hexagon as the inner loop. The other loop is responsible for moving the turtle to the starting point and the inner loop is responsible for drawing the hexagon.
 
 This algorithem is expressed in Java in `src/lectures/chapter2/Honeycomb.java`. Note that at the end of the constructor, there are two lines of code that reset the position of the turtle to its original position. The pen was up in the last iteration of the loop. So this position resetting has no visual effect. Why do we bother? That is because we don't want to lose track of the turtle. Suppose that drawing a honeycomb needs to be embedded into a even more complex patter. Without knowing the position of the turtle, it's very hard if not impossible to continue to the next honeycomb.
+
+## Classes and Objects
+Classes are fundamental building blocks of object-oriented programming. Each class represents some kind of real-world entity. A Java program is a collection of classes, writtent by the author or imported from the library.
+
+In Java, we write class declarations, code to be compiled. In other words, all code we write will be contained in some class. A class declaration defines a collection of possible objects. Objects interact with eacho other to perform the task of the program.
+
+An object is also called an instance of the class from which it is created. The object creation expression is in the following form:
+```Java
+new ClassName(...) //creation expression
+```
+This expression gives an object of the class `ClassName`. We now have the object but how can we refer to it? It doesn't have a name yet and it's not convenient. So let's give it a name.
+
+A variable identifier, or variable in short, is a name we give to the newly created object to keep track of it. Java has its rules on identifiers. Additionally, there is a list of reserved words that Java compiler recognizes out of the box. They have their specific meanings and programmers cannot use them as identifiers. They are already in use by the JVM.
+Any other names must be declared/defined before use.
+```Java
+private ClassName VariableName; // field declaration
+```
+To remember something in variables, we use the assignment statements.
+```Java
+Variable = Expression; // assignment statement
+```
+Now we can create an object and give the newly created object a name `o` with the following statement
+```Java
+o = new ClassName(...);
+```
+As stated before, we use object to perform actions and we achieve that through method call statements as follows:
+```Java
+Object.MethodName(Arguments); // method call statement
+```
+Arguments provide additional information required to perform the action.
