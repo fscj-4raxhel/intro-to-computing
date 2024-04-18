@@ -88,3 +88,41 @@ The states of different objects are independent. Changing the state of object on
 When an object is created, some memory is allocated to store the state of the object. In other words, the keyword `new` in the creation expression indicates the JVM to set aside some memory space for the object to be created. The memory has an address which encapsulated by Java as an object reference, or reference in short.
 
 Then the assignment statement associate the reference returned by the creation expression on the rhs of `=` with the variable name in the lhs `=`.
+
+## Java Program Framework
+As mentioned earlier, each line of code we write in Java belongs to some class and the code for a class is stored in a file having the same name as the class with a `.java` suffix. A main class in Java typically has the following structure.
+
+```Java
+package PackageName;
+
+import LibraryName;                    // Library imports
+import static LibraryName.ClassName.*; // Static  imports
+
+
+/** Class comments */
+public class ClassName{
+
+    private type Variable; // Instance variables
+
+    /** Constructor comments */
+
+    public ClassName(){
+        statements;
+    }//end of constructor
+
+    public static void main(String[] args){ ClassName v = new ClassName(); };
+
+}// end of class
+```
+The Oracle document defines a Java package as follows:
+> Definition: A package is a grouping of related types providing access protection and name space management. Note that types refers to classes, interfaces, enumerations, and annotation types. Enumerations and annotation types are special kinds of classes and interfaces, respectively, so types are often referred to in this lesson simply as classes and interfaces.
+
+The `import` statements come with different forms and hence bring different classes available. In the first form, all types in LibraryName become available in this case while in the second form, only the static members (static field and methods) become available. We import from packages.
+
+Instance variables are the variables that represent the state of an object and represent memeory in which a value may be stored.
+
+Class declaration starts with the `class` keyword followed by the `ClassName` which is choosen to reflect what the class represents. By convention, `ClassName` starts with uppercase letter.
+
+The class body is the statements within the `{}` after the class declaration till the end of the file if there is only one class in a file.
+
+Constructor is a special kind of method that enables parameterized ways of objec creation. What makes a method constructor is that the header contains the `ClassName`. The constructor body is then the statements enclosed in the `{}` following the hearder.
