@@ -82,4 +82,9 @@ Arguments provide additional information required to perform the action.
 ### State and Behavior
 Each object has a state which is a collection of the things it knows. The behavior of an object is what it does when responding to a method call. An object's behavior depends on its states and may change its states.
 
-The states of different objects are independent. Changing the state of object one does not affect the state of object two. See the two turtle example in `/src/lectures/chapter2/TwoOnOne.java`
+The states of different objects are independent. Changing the state of object one does not affect the state of object two. See the two turtle example in `/src/lectures/chapter2/TwoOnOne.java`.
+
+### Objects, Variables, and Memory
+When an object is created, some memory is allocated to store the state of the object. In other words, the keyword `new` in the creation expression indicates the JVM to set aside some memory space for the object to be created. The memory has an address which encapsulated by Java as an object reference, or reference in short.
+
+Then the assignment statement associate the reference returned by the creation expression on the rhs of `=` with the variable name in the lhs `=`.
