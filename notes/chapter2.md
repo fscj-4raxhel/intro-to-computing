@@ -126,3 +126,6 @@ Class declaration starts with the `class` keyword followed by the `ClassName` wh
 The class body is the statements within the `{}` after the class declaration till the end of the file if there is only one class in a file.
 
 Constructor is a special kind of method that enables parameterized ways of objec creation. What makes a method constructor is that the header contains the `ClassName`. The constructor body is then the statements enclosed in the `{}` following the hearder.
+
+## Execution of Java Program
+Java achieves the platform independent design goal by applying an additional layer of abstraction between source code and machine code. In fact, Java compiler translates the source code into a machine-code like binary langauge called Java bytecode. And then a special program named Java interpreter, which is writtent in native machine languages executes Java bytecode on the target platform. As long as the target platform has Java interpreter written in its native language, Java bytecode can run. Platform independence achieved.
