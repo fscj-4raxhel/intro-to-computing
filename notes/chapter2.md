@@ -129,3 +129,8 @@ Constructor is a special kind of method that enables parameterized ways of objec
 
 ## Execution of Java Program
 Java achieves the platform independent design goal by applying an additional layer of abstraction between source code and machine code. In fact, Java compiler translates the source code into a machine-code like binary langauge called Java bytecode. And then a special program named Java interpreter, which is writtent in native machine languages executes Java bytecode on the target platform. As long as the target platform has Java interpreter written in its native language, Java bytecode can run. Platform independence achieved.
+
+## Java Syntax
+A programming language is the medium of communication between the programmer and a program, the compiler. Grammatical rules must be followed to allow clear, unambiguous communications. Hence, each programming language has its set of grammatical rules (its syntax) and a set of rules about meaning (semantics).
+
+See [Java Language Specification](https://docs.oracle.com/javase/specs/jls/se11/html/jls-2.html#jls-2.1) for full Java grammar. This requires some advanced knowledge to understand this such as BNF-notation and context-free grammar etc. I plan to get there and review in depth. So I'm going to skip the simplified version in this section of this first year book. Let it focus on introducing computing in Java.
