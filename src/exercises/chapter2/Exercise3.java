@@ -6,24 +6,26 @@ import static java.lang.Math.*;
 /**
  * @author D. Hughes
  * @version 1.0 (April 2014)
- * “Write a program to draw a cube, in perspective, as shown below.
- * The sides of the cube should be 40 units long.
- * Use any reasonable means to draw the figure
- * (it cannot simply be drawn using a single loop, but must composed of a number of parts.)
- * The turtle can be moved from one place to another without drawing a line
- * if the method penUp is used before the forward.
- * (Don’t forget to put the pen down again.)”
-
-Excerpt From
-Introduction to Computer Science
-David Hughes
-This material may be protected by copyright.
+ *          “Write a program to draw a cube, in perspective, as shown below.
+ *          The sides of the cube should be 40 units long.
+ *          Use any reasonable means to draw the figure
+ *          (it cannot simply be drawn using a single loop, but must composed of
+ *          a number of parts.)
+ *          The turtle can be moved from one place to another without drawing a
+ *          line
+ *          if the method penUp is used before the forward.
+ *          (Don’t forget to put the pen down again.)”
+ * 
+ *          Excerpt From
+ *          Introduction to Computer Science
+ *          David Hughes
+ *          This material may be protected by copyright.
  */
 public class Exercise3 {
-    private TurtleDisplayer display; //display to draw on
-    private Turtle          yertle;  //turtle to do drawing
+    private TurtleDisplayer display; // display to draw on
+    private Turtle yertle; // turtle to do drawing
 
-    public Exercise3(){
+    public Exercise3() {
         display = new TurtleDisplayer();
         yertle = new Turtle();
         display.placeTurtle(yertle);
@@ -51,10 +53,12 @@ public class Exercise3 {
             yertle.forward(40);
             yertle.right(PI / 2);
         }
-
+        yertle.penUp();
         display.close();
 
     }// constructor
 
-    public static void main(String[] args){Exercise3 e3 = new Exercise3();};
+    public static void main(String[] args) {
+        Exercise3 e3 = new Exercise3();
+    };
 }
