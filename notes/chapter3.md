@@ -79,3 +79,13 @@ As shown in the code snippet above, the formal parameter `radius` is used in the
 - Actual parameters, or arugments, are the expressions passed in method call.
 
 Java enforces that a method with no (formal) parameters invoked with no arguments (actual parameters); a method with one parameter invoked with one argument and so on. In addition to this one-to-one mapping, the type of corresponding argument must be compatible with the formal parameter.
+
+### Drawing a Beach Umbrella
+See code in `src/lectures/chapter3/Umbrella.java`.
+
+### Memory Model
+Memory model is a diagram that visualizes what is happening in a particular point in the exectuion of the program. This kind of abstraction helps with analysis of the program.
+
+In those diagrams, an object or active method (begun but not yet terminated) are represented by rounded rectangles labeled by the their names. Within rounded rectangle of an object, there are rectangles representing the instance variables with the variable names as labels. Similarly, within active methods, these labeled rectangles represent the formal parameters and local variables.
+
+When the program referes to a name, it starts the search from the inside out. e.g. If we are looking for the `radius` variable in the `drawHexagon` method, we would search that rounded rectangle box first. If it's not found, we will search the encompassing box in this case is the `Umbrella` box.
