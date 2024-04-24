@@ -27,4 +27,13 @@ Note the method calls in line `24` and `26` do not include an "caller" `Object`.
 ### Method Execution
 When a method is invoked within some code, the code was suspended and the execution of the method body starts (pushed into the call stack). Once the last statement of the method body is exectuted (popped out of the call stack) the exectution of the code containing the method invocation resumes. The statements of the method are executed by the object on teh call method.
 
-Method declarations do not stand along. They are always part of a class. In fact, a class declaration is a collection of other declarations include constructor declarations, instance variable delcarations, and method declarations. 
+Method declarations do not stand along. They are always part of a class. In fact, a class declaration is a collection of other declarations include constructor declarations, instance variable delcarations, and method declarations.
+
+### Centering the Hexagon
+To write easy to (re-)use code we need to think out of the box. That means we need to think about how the caller code would use the method we are about to write. For example, previously, the code we write to draw a hexagon starts drawing from the postion where the turtle currently resides. There is no complaint if the task is to draw one hexagon and one only.
+
+Issues arise, however, when the acutal task is to tiling a space with hexagons. It would be the caller's responsibility to figure out how wo move the turtle to the next starting point. The problem is that if the drawHexagon was implemented this way, it complicated the math on the caller side. It would be much better if our code draw a hexagon centered at the turtle's current location.
+
+See `src/lectures/chapter3/Hexagon2.java` for how to center it.
+
+Note the use of some local variables, `radius`, `angle`, `side`. They exist only when the method is exectuing and they help with avoid repeatedly compute the same value over and over again. Instead, the program computes the values once and store them in to variables. Later down the road, when the values are needed, the program simply retrieves the values.
