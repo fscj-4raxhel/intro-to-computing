@@ -89,3 +89,32 @@ Memory model is a diagram that visualizes what is happening in a particular poin
 In those diagrams, an object or active method (begun but not yet terminated) are represented by rounded rectangles labeled by the their names. Within rounded rectangle of an object, there are rectangles representing the instance variables with the variable names as labels. Similarly, within active methods, these labeled rectangles represent the formal parameters and local variables.
 
 When the program referes to a name, it starts the search from the inside out. e.g. If we are looking for the `radius` variable in the `drawHexagon` method, we would search that rounded rectangle box first. If it's not found, we will search the encompassing box in this case is the `Umbrella` box.
+
+## Function methods
+Function methods or functions in Java are methods that are like functions in mathematics. They are used to abstract computations or as accessor methods for classes.
+
+`sin(angle)` is an example of function methods that we have seen.
+
+To perform a procedure method, we write a method call statement while to perform a function method, we write a function call as (part of) an expression.
+
+A function method declaration takes the following form:
+```java
+modifier type methodName(type paramName,...)
+{
+body    //function body
+}
+```
+The `void` keyword in procedure method declaration was replaced by `type` which is the kind of value the function is computing. Also, since the purpose of a function is to produce some value, there must be a way from within the body to indicate the value. This is done through returen statements as follows:
+```java
+return expression; // return statement
+```
+A return statement consists of three parts, the `return` keyword and the expression that gives the return value followed by semicolon`;`. It does three things as well. It computes the value of `expression`; set it as the return value; and terminates the method. So the return statement is usually the last statement in function body.
+
+### Patter of Method Call
+Method or function, the pattern of steps exectuion is the following:
+1. Arguments (expressions) are computed L --> R
+2. Calling method is suspended
+3. Values of arguments are assigned to parameters L --> R
+4. Body of method is executed
+5. Return value provided to calling method
+6. Calling method resumes after point of call
