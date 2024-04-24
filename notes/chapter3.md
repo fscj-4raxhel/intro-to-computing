@@ -37,3 +37,45 @@ Issues arise, however, when the acutal task is to tiling a space with hexagons. 
 See `src/lectures/chapter3/Hexagon2.java` for how to center it.
 
 Note the use of some local variables, `radius`, `angle`, `side`. They exist only when the method is exectuing and they help with avoid repeatedly compute the same value over and over again. Instead, the program computes the values once and store them in to variables. Later down the road, when the values are needed, the program simply retrieves the values.
+
+## Methods with parameters
+In the previous section, we imporved code resuability by centering the hexagon at the current position of the turtle, which is great. In this section, we will generalize that code and make it useable for drawing hexagon of different sizes. To achieve this goal, we need help from a parameter. `Turtle.forward(length);` is an exmaple of it. Similar to the `length` parameter specifying the length that the turtle should advance, we can use a `radius` parameter to specify the size of the hexagon to draw.
+### Parameter List
+A parameterized method declaration takes the following form in Java.
+```java
+modifiers void methodName (type paramName, ...)
+{
+body
+}
+```
+Hence we can change the `drawHexagon()` method into:
+```java
+/**
+ * This is a parameterized version of the drawHaxagon method
+ * 
+ * @param radius radius of hexagon
+ */ 
+    private void drawHexagon(double radius) {
+        double side;    // exterior angle between sides of hexagon
+        double angle;   // length of side of the hexagon
+        angle = PI / 3;
+        side = 2 * radius * sin(PI / 6);
+        
+        yertle.forward(radius);
+        yertle.right(PI / 2 + PI / 6);
+        yertle.penDown();
+        for (int i = 0; i < 6; i++) {
+            yertle.forward(side);
+            yertle.right(angle);
+        }
+        yertle.penUp();
+        yertle.left(PI / 2 + PI / 6);
+        yertle.backward(radius);
+    }// drawHexagon
+```
+As shown in the code snippet above, the formal parameter `radius` is used in the method body just as a local variable. They are also the same in terms of the lifespan. i.e. formal parameters lost their value after the method terminates just as the local variables. The only difference between thet two is that the value of formal parameters are passed in at method call time. That is why we can use `radius` in the method body without an assignment statement to initialize its value.
+
+- Formal parameters, or simply parameters, are the variables declared in the method header. They are the receiving parameters.
+- Actual parameters, or arugments, are the expressions passed in method call.
+
+Java enforces that a method with no (formal) parameters invoked with no arguments (actual parameters); a method with one parameter invoked with one argument and so on. In addition to this one-to-one mapping, the type of corresponding argument must be compatible with the formal parameter.
