@@ -118,3 +118,17 @@ Method or function, the pattern of steps exectuion is the following:
 4. Body of method is executed
 5. Return value provided to calling method
 6. Calling method resumes after point of call
+
+## Testing and debugging with methods
+Programs or even classes do not need to be written at once. Incremental implementation of code is recommended because it's easier to write and easier to debug.
+
+We don't even have to write a method at once. Instead, we can write a method stub which is a substitution of a method with the required heard and a body consists of output strings that reflect that the method is called and display its parameters(arguments).
+
+An example method stub for the `drawHexagon` method is the following:
+```java
+private void drawHexagon(double radius) {
+    System.out.println("drawHexagon called with parameters:");
+    System.out.println("radius: " + radius);
+}// drawHexagon
+```
+The `System` class is a standard class like `Math` that provides access to system properties for example the system display console called `out`. In the method stub, we called a method of `out` called `println()` to display its argument on the console in one line. Note the `+` operator connecting two strings are concatenation instead of "adding" when it was used between two numerical values.
