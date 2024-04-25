@@ -132,3 +132,37 @@ private void drawHexagon(double radius) {
 }// drawHexagon
 ```
 The `System` class is a standard class like `Math` that provides access to system properties for example the system display console called `out`. In the method stub, we called a method of `out` called `println()` to display its argument on the console in one line. Note the `+` operator connecting two strings are concatenation instead of "adding" when it was used between two numerical values.
+
+## Methods, Scope and Visibility
+Having seen examples of mixed use of names, we need to understand the rules that Java imposes on resoluting a name.
+
+The rules that sort out the (unique) meaning of a variable, method or class name are called scope rules. The converse of scope rules is the visibility rules which specifies where a variable can be used.
+
+### Java Scope Rules
+To determine which declaration of a name is being referenced within a piece of code, we follow the following steps:
+1. Look for a declaration of the name in the for loop, method, or constructor in which the code resides. If one exists, this is the defining declaration. This rule applies to both formal parameter declarations and local declarations.
+2. If no such defining declaration exists, apply step 1 again, looking in the immediately enclosing code unit which could be a for loop (with nested loops), method, constructor or the class itself. Continue until there is no enclosing unit. Usually in Java, there is only the for loop, method/constructor level and the class level to consider.
+3. If no such declaration exists, check the public declarations of public classes from imported packages. This is how the names such as Turtle, forward, and PI that are imported from the Media or java.lang.Math packages are resolved.
+4. If no such declaration exists, the name is undeclared and the reference is in error.
+
+In an overly simplified version, find the closest `{}` that encloses a declaration of the refered variable. And that declaration is the meaning.
+
+### Java Visibility Rules
+The visibility rules are derived from the scope rules and, for Java, are:
+
+1. A loop index declared in a for loop is visible only within the loop body and any nested for loops.
+2. A local variable or formal parameter is visible only within the method in which it is declared.
+3. An instance variable or method declared private within a class is visible within any constructor or method of that class, unless it is hidden by a local variable declared with the same name.
+4. An instance variable, method or constructor declared public within a class is visible as in rule 3 but is also visible within any method or constructor of any class to which the declaring class is visible.
+
+We want to keep the visibility of a variable as small as possible because that leads the code easier to manage.
+
+### Declaring Names, Rule of Thumb
+1. A for loop index should be declared in the for statement header.
+2. A variable should be declared as a local variable if its value concerns only the single method or constructor.
+3. A variable should be declared as a formal parameter if the behavior of the method depends on the value of variable.
+4. A variable should be declared as a private instance variable if it is part of the state of the object and/or serves to coordinate the activity of two or more methods or constructors.
+5. A method should be declared as private unless it is to be used by code in other classes.
+6. A constructor is usually declared as public since objects of the class will be created by code in other classes.
+
+Of course these are just guidlines. As we learn more about programming, we will break some of the "rules". For example, there is a design pattern called singleton where we want to make sure there is only one instance of a class ever been created during the program runs. We can achieve this by making the constructor private and provide the object before it's needed.
