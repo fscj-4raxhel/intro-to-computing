@@ -35,10 +35,10 @@ public class Exercise4 {
         yertle.moveTo(-60,-60);
         yertle.left(PI / 2);
         drawPolygon(5,15);
-        yertle.moveTo(-40,-60);
         yertle.right(PI / 4);
-        drawPolygon(4,40);
-        yertle.moveTo(-52,0);
+        drawPolygon(4,60);
+        yertle.moveTo(-60,12);
+        yertle.left(PI / 4);
         drawPolygon(3,60);
         yertle.moveTo(50,70);
         drawSun(10,10);
@@ -64,6 +64,8 @@ public class Exercise4 {
 
         angle = 2 * PI / nSides;
         side = 2 * radius * sin(PI / nSides);
+
+        yertle.forward(radius);
         yertle.right(PI / 2 + PI / nSides);
         yertle.penDown();
         for (int i = 0; i < nSides; i++) {
