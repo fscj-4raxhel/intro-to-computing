@@ -23,24 +23,39 @@ import static java.lang.Math.*;
  * 
  * 
  */
-public class Exercise3 {
+public class Exercise4 {
 
     private Turtle yertle;
     private TurtleDisplayer display;
 
-    public Exercise3() {
+    public Exercise4() {
         yertle = new Turtle();
         display = new TurtleDisplayer();
         display.placeTurtle(yertle);
-        yertle.moveTo(-60,60);
-        drawPolygon(3,40);
-        yertle.moveTo(60,60);
-        drawPolygon(4,40);
-        yertle.moveTo(60,-60);
-        drawPolygon(5,40);
         yertle.moveTo(-60,-60);
-        drawPolygon(6,40);
+        yertle.left(PI / 2);
+        drawPolygon(5,15);
+        yertle.moveTo(-40,-60);
+        yertle.right(PI / 4);
+        drawPolygon(4,40);
+        yertle.moveTo(-52,0);
+        drawPolygon(3,60);
+        yertle.moveTo(50,70);
+        drawSun(10,10);
         display.close();
+    }
+
+    private void drawSun(double radius, int nRays){
+        drawPolygon(20,radius);
+        for (int i = 0; i < nRays; i++) {
+            yertle.forward(radius);
+            yertle.penDown();
+            yertle.forward(radius);
+            yertle.penUp();
+            yertle.backward(2 * radius);
+            yertle.right(2 * PI / nRays);
+        }
+        System.out.println("Turtle position X: " + yertle.getScreenX() + "Y: " + yertle.getScreenY());
     }
 
     private void drawPolygon(int nSides, double radius) {
@@ -49,12 +64,11 @@ public class Exercise3 {
 
         angle = 2 * PI / nSides;
         side = 2 * radius * sin(PI / nSides);
-
-        yertle.forward(radius);
         yertle.right(PI / 2 + PI / nSides);
         yertle.penDown();
         for (int i = 0; i < nSides; i++) {
             yertle.forward(side);
+            // System.out.println("Turtle position X: " + yertle.getScreenX() + "Y: " + yertle.getScreenY());
             yertle.right(angle);
         }
         yertle.penUp();
@@ -63,6 +77,6 @@ public class Exercise3 {
     }
 
     public static void main(String[] args) {
-        Exercise3 e3 = new Exercise3();
+        Exercise4 e4 = new Exercise4();
     }
 }
