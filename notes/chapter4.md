@@ -38,3 +38,8 @@ The basic arithmetic operators in Java are summerized as follows:
 | `%`      | reminder      |
 
 Note that the default division of two fixed-point numbers are integer division. For example, `5/2` results `2` with the reminder ignored.
+
+### Order of Operations
+When given an expression like `a - b / c`, what would be the right interpretation of this expression. As in algebra, there are rules of operator precedence that make the meaning clear. So does in Java. Each operation has a precedence level. Higher-level operators bind to the operands more tightly than lower-level operators. The same level ones bind the operand left to right.
+
+Parentheses are used to group the operators and their operands.
