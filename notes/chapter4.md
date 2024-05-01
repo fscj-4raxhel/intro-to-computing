@@ -12,3 +12,10 @@ In Java, there are four versions of fixed-point numbers, `byte`, `short`, `int`,
 `float` and `double` are approximations, `float` has 8 digits of precision while `double` has about 18. The precision limits comes from the fact that the actual number like a third 1/3 in math is indeed infinite. It has repeating digits infinitely. However, computers have finite memory. This difference is the root of accumulated round-off error where the sum of three 1/3 doesn't equal 1.0.
 
 In some cases, exact arithmetic is required or very sensitive to precision, for example in finance or scientific programming. We need to use other libraries to address those needs. Keep in mind of that.
+
+### Numeric Literals
+Numeric Literals are explicity numeric values in a programm, such as `10`.
+
+In Java, fixed-point numeric literals are sequence of decimal digits optionally preceded by a sign. If the value is within the range of `int` it is considered type `int` unless followed by letter `l` or `L` which makes it `long`. A value that is out of the range of `int` is considered `long`. There is no numeric literal for `short` or `byte`.
+
+Floating-point literals are written as a sequence of decimal digits, optionally preceded by a sign and followed by either a decimal point and a number of additional decimal digits or an exponent (in e-notation) or both. Unless followed by letter `f` or `F`, the floating-point literal is considered as `double`.
