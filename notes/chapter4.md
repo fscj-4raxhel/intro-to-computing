@@ -60,4 +60,11 @@ A widening conversion occurs when a value is converted into a "larger" type so t
 | `long`     | `double` | add a 0 fraction part
 | `float`    | `double` | add low-order 0 digits to fraction
 
+Note that `byte` and `short` are always converted into `int` before any calculation.
+
 We can also explicityly direct the compiler to change the type. This process is called `cast`. Using `cast` we can do a "narrowing" conversion which may cause information loss for example, casting a `double` value into `int` loses the fraction part.
+
+## Variables
+Variables or variable identifiers are named storage of certain type. They are abstractions of the hardware level memory cells at the programming language level.
+
+For each programming language, there are identifier rules and conventions. For example in Java, an identifier is the sequence of letters, numbers and `$` or `_`, starting with letters. There are also conventions of naming things. Fore example camelCase where the first word starting with all lower case while each subsequent word has a captial letter.
