@@ -43,3 +43,21 @@ Note that the default division of two fixed-point numbers are integer division. 
 When given an expression like `a - b / c`, what would be the right interpretation of this expression. As in algebra, there are rules of operator precedence that make the meaning clear. So does in Java. Each operation has a precedence level. Higher-level operators bind to the operands more tightly than lower-level operators. The same level ones bind the operand left to right.
 
 Parentheses are used to group the operators and their operands.
+
+### Modes of Arithmetic and Conversion
+The ALU of the computer can only perform operations on values of the same type. The type involved in expressions is called the mode of the expression. When the types of the operands are not the same, the expression is called the mixed-mode expression and conversion is used to change the types of the values involved.
+
+A widening conversion occurs when a value is converted into a "larger" type so there is no information loss. This can happen automatically as necessary following the order of operation. The widening conversion rules are summarized in the following table:
+
+| From | To       | Method |
+| -------- | ------- | ---- |
+| `byte`     | `int`    | add high-order 0 digits
+| `short`    | `int`    | add high-order 0 digits
+| `int`      | `long`   | add high-order 0 digits
+| `int`      | `float`  | add a 0 fraction part
+| `int`      | `double` | add a 0 fraction part
+| `long`     | `float`  | add a 0 fraction part
+| `long`     | `double` | add a 0 fraction part
+| `float`    | `double` | add low-order 0 digits to fraction
+
+We can also explicityly direct the compiler to change the type. This process is called `cast`. Using `cast` we can do a "narrowing" conversion which may cause information loss for example, casting a `double` value into `int` loses the fraction part.
