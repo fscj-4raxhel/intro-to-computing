@@ -68,3 +68,16 @@ We can also explicityly direct the compiler to change the type. This process is 
 Variables or variable identifiers are named storage of certain type. They are abstractions of the hardware level memory cells at the programming language level.
 
 For each programming language, there are identifier rules and conventions. For example in Java, an identifier is the sequence of letters, numbers and `$` or `_`, starting with letters. There are also conventions of naming things. Fore example camelCase where the first word starting with all lower case while each subsequent word has a captial letter.
+
+## Assignment Statement
+The assignment statement is used to commit something to memory. There are two parts involed, the left-hand side, lhs and the right-hand side, rhs connected by the assignment operator `=`. The lhs is usually a variable which represents a memory location while the rhs is usualy numeric expression involves variables and literals and represents the computation.
+
+### Assignment Compatibility
+An assignemnt statement is said to be valid if the type of the rhs is assignment-compatible with the type of the lhs variable. The rhs is assignment-compatible with the lhs if:
+- It is the same type
+- It is the subtype of lhs (Inheritance in OOO. Will be discussed later)
+- If it can be converted to the type of lhs using a widening conversion
+If the type of the rhs is not assignment compatible the compiler raises an error message.
+
+### Parameter Compatibility
+The rule is the same as assignment statement with parameter being the lhs and arguments being the rhs. If their type are compatible parameters are passed. Otherwise, compiler indicates an error.
