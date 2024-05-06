@@ -17,3 +17,13 @@ The creation expression (line 21) creates a picture object by loading its pixels
 
 ### Grayscale
 When light intensity is low, what we see is produced solely by the rods, another type of sensor, in the eye. That means we can only see a grayscale picture when the light is low. In RGB color representation, gray is perceived when we have the same value on each of the color channels.
+
+See code in ``.
+
+A `while` loop (also called indefinite loop or conditional loop) has the following format:
+```java
+while (condition){
+    body
+};
+```
+It repeats the `body` as long as the `condition` is `true`. `condition` is a boolean expression which evaluates to be either `true` or `false`. A `while` loop is a good choice in this case because we usually don't know the number of pixels in a picture beforehand.
