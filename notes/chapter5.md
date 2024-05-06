@@ -9,3 +9,11 @@ There are three sensors called cones in human eyes that preceive different wavel
 Then three light sources are close enough together, they appear to the eyes as one color instead of three. Using this priciple a television or computer screen is designed as a matrix of spots, called pixels. Each spot consists of three light sources, red, green, and blue. The two dimension arrangement of pixels are called resolution of the screen.
 
 Digital camera has sensors that can produce voltages for the three color channels. This is one way of digitalizing pictures. A computer can process the picture by modifying the values of the color channels of the pixels of the picture.
+
+## Processing Pictures
+See the code for loading and displaying a picture in `src/lectures/chapter5/DisplayPicture.java`.
+
+The creation expression (line 21) creates a picture object by loading its pixels from a data file stored on disk. The Picture constructor presents an open dialog to allow the user to select a picture file—a file with the .jpg extension.
+
+### Grayscale
+When light intensity is low, what we see is produced solely by the rods, another type of sensor, in the eye. That means we can only see a grayscale picture when the light is low. In RGB color representation, gray is perceived when we have the same value on each of the color channels.
