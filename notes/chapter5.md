@@ -18,7 +18,7 @@ The creation expression (line 21) creates a picture object by loading its pixels
 ### Grayscale
 When light intensity is low, what we see is produced solely by the rods, another type of sensor, in the eye. That means we can only see a grayscale picture when the light is low. In RGB color representation, gray is perceived when we have the same value on each of the color channels.
 
-See code in ``.
+See code in `src/lectures/chapter5/Grayscale.java`.
 
 A `while` loop (also called indefinite loop or conditional loop) has the following format:
 ```java
@@ -28,4 +28,16 @@ while (condition){
 ```
 It repeats the `body` as long as the `condition` is `true`. `condition` is a boolean expression which evaluates to be either `true` or `false`. A `while` loop is a good choice in this case because we usually don't know the number of pixels in a picture beforehand.
 
-xiguanle
+## The PictureDisplay, Picture and Pixel Classes
+This section is a quick introduction to there three classes and their methods used in `src/lectures/chapter5/Grayscale.java`.
+
+## Conditional Processing
+In the previous make grayscale example, the modification of all pixels in the picture is the same. But in many other use cases, different treatments are needed for different cases. Hence we need the `if` statement which has the following format:
+```java
+if ( condition ){
+    statements
+}
+```
+The `condition`, as in the while loop, is an expression that evaluates to a truth value. And if the `condition` is `true`, the `statements` are executed.
+
+`src/lectures/chapter5/RedEye.java` contains an example of combining `while` loop and `if` statement to achieve red-eye correction. It corrects the red-eye effect. The pupil appears red pupil instead of black because the light passes through the back of the pupil picking up the red color from the blood supply. The program set the color of a pixle to black when its original color is close enough to the color "RED". The closenss of two colors are measured by the color distance, which is the Euclidian distance of the color channel.
