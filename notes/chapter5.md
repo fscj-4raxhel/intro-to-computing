@@ -27,3 +27,5 @@ while (condition){
 };
 ```
 It repeats the `body` as long as the `condition` is `true`. `condition` is a boolean expression which evaluates to be either `true` or `false`. A `while` loop is a good choice in this case because we usually don't know the number of pixels in a picture beforehand.
+
+xiguanle
