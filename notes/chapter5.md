@@ -41,3 +41,8 @@ if ( condition ){
 The `condition`, as in the while loop, is an expression that evaluates to a truth value. And if the `condition` is `true`, the `statements` are executed.
 
 `src/lectures/chapter5/RedEye.java` contains an example of combining `while` loop and `if` statement to achieve red-eye correction. It corrects the red-eye effect. The pupil appears red pupil instead of black because the light passes through the back of the pupil picking up the red color from the blood supply. The program set the color of a pixle to black when its original color is close enough to the color "RED". The closenss of two colors are measured by the color distance, which is the Euclidian distance of the color channel.
+
+## Creating a picture
+In previous examples, we modified existing pictures. In this section we write a color picker program to create a picture that a pure color in it.
+
+See code for 
