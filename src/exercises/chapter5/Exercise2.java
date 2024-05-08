@@ -5,21 +5,17 @@ import java.awt.*;
 
 /**
  * 
- * Write a program to produce a color negative (such as could be used in a
- * printing process) of a picture. A color negative is a picture in which the
- * color channels for each pixel have had their value inverted. That is, if the
- * red channel value is r, it is replaced by 255-r. The same is true for the
- * green and blue channels.
- * 
- * Write a method:
- * 
- * private void makeNegative(Picture aPic){ ... }
- * 
- * that changes all the pixels in aPic to their inverse, producing a color
- * negative. The program should allow the user to select a picture, present it
- * on the display, modify it to a color negative and save the result.
+ * Write a program to convert an image into a night-time image.
+ * The night-time effect is created by modifying each pixel’s color based on
+ * how different (far) it is from "sky-blue" (Color(58,117,197)). For each
+ * pixel, the color distance between the pixel’s color and "sky blue" is
+ * computed. Each color channel of the pixel is modified by the ratio of this
+ * distance value and 311 (the maximum distance) such that “sky-blue” becomes
+ * black (the ratio is 0) and the color most distance from “sky-blue” remains
+ * unchanged (ratio is 1).
  * 
  */
+
 public class Exercise2 {
 
     private PictureDisplayer display;
