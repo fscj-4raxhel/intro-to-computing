@@ -50,3 +50,41 @@ If the condition is `true` the `then-part` which is `statements_1` is exectued. 
 
 ## Other Control Structures
 There are two additional loop structure in Java, `do` statement and `for-each` loop. A `do` statement performs a post-test loop where the loop condition is checked after the loop body. Thus the loop body is executed at least once. The `for-each` loop will be discussed in Chapter 8.
+
+The for of `do` statement is this:
+```java
+do{
+    statements
+}while(expression)
+```
+
+As a comparison, the `while` statement performs a pre-test where the loop condition is checked before the loop body so the loop body is executed zero or more times. There is another type of loop called in-test loop where the loop condition is checked in the loop body. Java does not support in-test loop out of the box but we can emulate by combining the `break` statement and `if` statement in a for loop. For example in the following form:
+```java
+for(Loop_init){
+    statements
+    if(!Loop_condition){
+        break;
+    }
+    statements
+}
+```
+Java also supports multi-branching statement called `switch-case`. In languages does not suuport multi-branching statement, for example Python, it has to be emulated with the cascading if-else-then statements.
+
+The form of `switch-case` is this:
+```java
+switch expression {
+    case value1: {
+        statements_1
+        break;
+    }
+    case value2: {
+        statements_2
+        break;
+    }
+    ...
+    default: {
+        statements_i
+        break;
+    }
+}
+```
