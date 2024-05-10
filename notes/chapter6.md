@@ -25,3 +25,28 @@ while ( forCondition_opt ){
 ```
 
 And since the equivalence of `for` loop and `while` loop, many programmers, especially who raised on C, use `for` loop as a shorthand of `while` and in many other cases avoid this practice.
+
+## The If Statement
+The execution of a program often branches based on some decisions make out side of the program such as user input. This decision structure is represented in Java as `if` statement which takes two forms, namely `if-then` and `if-then-else`.
+
+The form of `if-then` is this:
+```java
+if (expression){
+    statements
+}
+```
+If the `expression` is `true` the `then-part`, which is the statements in braces, are exectued otherwise the statement follows the closing `}` is exectued.
+
+The form of `if-then-else` is this:
+```java
+if (expresssion){
+    statements_1
+}
+else{
+    statements_2
+}
+```
+If the condition is `true` the `then-part` which is `statements_1` is exectued. Otherwise, the `else-part` which is `statements_2` is executed.
+
+## Other Control Structures
+There are two additional loop structure in Java, `do` statement and `for-each` loop. A `do` statement performs a post-test loop where the loop condition is checked after the loop body. Thus the loop body is executed at least once. The `for-each` loop will be discussed in Chapter 8.
