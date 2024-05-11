@@ -88,3 +88,8 @@ switch expression {
     }
 }
 ```
+
+## Boolean Operation
+This section is pretty much skipped becuase I'm pretty confident with my training in discrete math.
+
+Here I want to recall the reminder from the professor D. Hughes about the difference in value equality and reference equality. When the two operands of `==` are both the primitive types then it performs a value equality test. When two objects are linked by `==` Java checks whether they refer to the same object instead of checking whether these two objects have the same attriburtes (instance variables).
