@@ -17,3 +17,8 @@ Each sample is an integral value. The range of values depends on the sample size
 In short, sounds are represented as a collection of samples, which are integer values representing the voltage of the voltages recorded by the ADC.
 
 ## Normalization of Sound
+Since the amplitudes are represented as integer values, they have ranges of values. When we scale up the amplitude of samples in a sound to make it louder, there is a risk that the new amplitude value get out of the range of its sample size can represent. The sound is distorted. This is called clipping. To make the sound as loud as possible without clipping we need to normalize the sound with two passes.
+
+In the first pass, we figure out the maximum amplitude which in turn determines the factor by which we scale the amplitudes. And in the second pass we modify the amplitudes.
+
+We need two pass partially because of the iterator we use can't go backwards or reset to the beginning. So for two passes, we need two iterators.
