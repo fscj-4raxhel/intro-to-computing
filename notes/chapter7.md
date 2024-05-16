@@ -22,3 +22,12 @@ Since the amplitudes are represented as integer values, they have ranges of valu
 In the first pass, we figure out the maximum amplitude which in turn determines the factor by which we scale the amplitudes. And in the second pass we modify the amplitudes.
 
 We need two pass partially because of the iterator we use can't go backwards or reset to the beginning. So for two passes, we need two iterators.
+
+## Collection and for-each loop
+A collection in Java is a class that contains or is made up of a number of objects. Obviously, sound is a collection of samples. Java has a special construct called for-each loop to iterate through a collection. It takes the following form:
+```java
+for (type variable : expression){
+    statements
+}
+```
+`type` is the type of the objects within the collection. `expression` is an expression that results in  Collection object.
