@@ -31,5 +31,3 @@ for (type variable : expression){
 }
 ```
 `type` is the type of the objects within the collection. `expression` is an expression that results in  Collection object.
-
-This is dummy Chris' Dummy commit
