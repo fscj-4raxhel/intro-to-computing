@@ -37,3 +37,38 @@ while (it.hasNext()){
     .
 }
 ```
+An Iterator guarantees that the entire collection is visited in some order but there is no guarantee that the order stays unchanged.
+
+### Indexing
+If the items in a collection are aligned along some dimensions, then we can index them along each dimension through 0 based index. This way, the programmers are responsible of indexing through the collection but they would have complete control of the order the items are accessed.
+
+Technically speaking, not all Collection types are indexable. An indexable collection is called a List.
+
+The Sound and Picture objects are one-dimension and two-dimension collections respectively. So we can index through them with the following code easily.
+
+```Java
+Sample s;
+for (int i = 0; i < aSound.getNumSamples(); i++){
+    ... // Same loop body as before.
+}
+```
+For two-dimension collection type, there is row-major iteration that goes left-to-right, top-to-bottom as follows:
+```Java
+Pixel p;
+for (int r = 0; r < aPic.getHeight(); r++){
+    for (int c = 0; c < aPic.getHeight(); c++){
+        p = aPic.getPixel(c,r);
+        ...// Same manipulations as before.
+    }
+}
+```
+and column-major iteration that goes top-to-bottom, left-to-right as follows:
+```Java
+Pixel p;
+for (int c = 0; c < aPic.getHeight(); c++){
+    for (int r = 0; r < aPic.getHeight(); r++){
+        p = aPic.getPixel(c,r);
+        ...// Same manipulations as before.
+    }
+}
+```
