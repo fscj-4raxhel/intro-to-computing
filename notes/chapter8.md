@@ -72,3 +72,14 @@ for (int c = 0; c < aPic.getHeight(); c++){
     }
 }
 ```
+## Processing A One-Dimensional Collection
+### Raising the pitch of a sound
+See `src/lectures/chapter8/RaiseFreq.java` for an example of doubling the frequency of a sound.
+Here I used a coding trick called cascading method call. Care should be taken with cascading method calls before trading readability for convinence.
+### Reversing A Sound
+See `` for an example of reversing a sound.
+## Processing A Two-Dimensional Collection
+### Random Paint
+See `` for an example of random paint
+### Rotating a Picture
+See `` for an example of rotating a picture
