@@ -4,6 +4,8 @@ import Media.*;
 
 public class Exercise1 {
 
+    private SoundPlayer player;
+
     /**
      * Clipping a sound is just to copy a part of the samples from one position to
      * another
@@ -12,7 +14,13 @@ public class Exercise1 {
      */
 
     public Exercise1() {
-
+        player = new SoundPlayer();
+        Sound oriSound, clippedSound;
+        oriSound = new Sound();
+        player.placeSound(oriSound);
+        clippedSound = clip(oriSound, 100, 1200);
+        player.close();
+        clippedSound.save();
     }
 
     /**
@@ -25,6 +33,9 @@ public class Exercise1 {
      */
     private Sound clip(Sound original, int from, int to) {
         Sound result = new Sound(to - from + 1);
+        for (int i = from; i <= to; i++) {
+            result.getSample(i - from).setAmp(original.getSample(i).getAmp());
+        }
         return result;
     }
 
